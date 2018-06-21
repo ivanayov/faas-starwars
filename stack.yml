@@ -12,3 +12,12 @@ functions:
     lang: python3
     handler: ./swquotes
     image: docwareiy/swquotes
+    environment:
+      content_type: text/html
+
+  swimg:
+    lang: python3
+    handler: ./swimg
+    image: docwareiy/swimg
+    environment:
+      content_type: image/jpeg

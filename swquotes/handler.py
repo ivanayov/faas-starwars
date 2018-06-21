@@ -3,7 +3,7 @@ from random import randint
 def handle(req):
     result = []
 
-    for line in open("data.txt"):
+    for line in open("function/data.txt"):
         if req.lower() in line.lower():
             result.append(line)
     
