@@ -1,0 +1,14 @@
+provider:
+  name: faas
+  gateway: http://127.0.0.1:8080
+
+functions:
+  yodish:
+    lang: python3
+    handler: ./yodish
+    image: docwareiy/yodish
+
+  swquotes:
+    lang: python3
+    handler: ./swquotes
+    image: docwareiy/swquotes
