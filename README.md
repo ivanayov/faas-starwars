@@ -13,4 +13,8 @@ Returns a random Star Wars quote, containing the quote.
 
 ## swimg
 
-Opens Star Wars images
+Input: Name query, f.e. "Darth Vader", "Darth", "Leia", "BB8"
+
+Opens the required Star Wars image or random one if the input is empty.
+
+

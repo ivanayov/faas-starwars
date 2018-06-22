@@ -4,8 +4,18 @@ from random import randint
 def handle(req):
     images = os.listdir("function/pictures")
 
-    index = randint(0, len(images)-1)
-    with open("function/pictures/" + images[index], 'rb') as pic:
-        jpgdata = pic.read()
-
-    return jpgdata
+    if req:
+        name = req.lower().replace(" ", "_")
+        matching = [s for s in images if name in s]
+        if len(matching):
+            index = randint(0, len(matching)-1)
+            with open("function/pictures/" + matching[index], 'rb') as pic:
+                res = pic.read()
+        else:
+            res = "Image is not available"
+    else:
+        index = randint(0, len(images)-1)
+        with open("function/pictures/" + images[index], 'rb') as pic:
+            res = pic.read()
+        
+    return res
