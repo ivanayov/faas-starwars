@@ -1,4 +1,4 @@
-import os
+import os, sys
 from random import randint
 
 def handle(req):
@@ -18,4 +18,5 @@ def handle(req):
         with open("function/pictures/" + images[index], 'rb') as pic:
             res = pic.read()
         
+    os.write(1, res)
     return res
